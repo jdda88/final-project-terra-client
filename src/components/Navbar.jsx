@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div className="w-full">
-      <nav className="flex flex-row items-center justify-between w-full px-16 text-customGreen border-b-2">
+      <nav className="flex flex-row items-center justify-between px-16 text-customGreen border-b-2 ">
         <div className="flex flex-row items-center justify-between space-x-2">
           <Link to="/">
             <img
@@ -14,7 +14,7 @@ function Navbar() {
               href="/"
             />
           </Link>
-          {/* <span>Terra Travel</span>  */}
+          <span className="font-bold text-2xl">Terra Travel</span>
         </div>
         <div className="flex flex-row ml-4">
           <ul className="flex flex-row space-x-16 justify-evenly">
