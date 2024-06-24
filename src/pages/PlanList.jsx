@@ -6,4 +6,4 @@ function PlanList() {
   )
 }
 
-export default PlanList
+export default PlanList;

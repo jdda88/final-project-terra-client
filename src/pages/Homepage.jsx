@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 function Homepage() {
   return (
     <div>
-        <h1>Homepage</h1>
+        <h1></h1>
         <Footer />
         
 
