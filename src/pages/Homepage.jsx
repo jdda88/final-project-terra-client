@@ -1,13 +1,16 @@
-import { Link } from "react-router-dom";
-import TerraHomeCard from "../components/TerraHomeCard";
-import Footer from "../components/Footer";
+import React from 'react'
+import Footer from '../components/Footer'
 
 function Homepage() {
-    return (
-        <div>
-            <TerraHomeCard />
-            <Footer />
-        </div>
-    )
+  return (
+    <div>
+        <h1>Homepage</h1>
+        <Footer />
+        
+
+    </div>
+
+  )
 }
-export default Homepage;
+
+export default Homepage
