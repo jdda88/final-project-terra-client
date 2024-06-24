@@ -21,7 +21,7 @@ function Navbar() {
         </div>
         <div className="flex flex-row ml-4">
           <ul className="flex flex-row space-x-16 justify-evenly">
-            <Link to="/plan">
+            <Link to="/destinations">
               <li>
                 <a href="">Destinations</a>
               </li>
