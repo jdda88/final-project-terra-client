@@ -11,10 +11,22 @@ function AuthProvider({ children }) {
 
   const login = async (body) => {
     try {
-      const response = await api.post("/user/signup", body);
+      let response;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+      if (emailRegex.test(body.loginInfo)) {
+        response = await api.post("/user/login", {
+          password: body.password,
+          email: body.loginInfo,
+        });
+      } else {
+        response = await api.post("/user/login", {
+          password: body.password,
+          username: body.loginInfo,
+        });
+      }
       if (response.status === 201 || response.status === 200) {
-        setUser(response.data.user);
+        setUser(response.data);
         setLoggedIn(true);
         localStorage.setItem("authToken", response.data.authToken);
         navigate("/");
@@ -55,12 +67,19 @@ function AuthProvider({ children }) {
     }
   };
 
+  const logout = () => {
+    setUser(null);
+    setLoggedIn(false);
+    localStorage.clear();
+    navigate("/");
+  };
+
   useEffect(() => {
     verify();
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, login, signup, loggedIn }}>
+    <AuthContext.Provider value={{ user, login, signup, loggedIn, logout }}>
       {children}
     </AuthContext.Provider>
   );

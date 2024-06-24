@@ -2,14 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .center {
-  @apply flex justify-center items-center
+  @apply flex justify-center items-center;
 }
-
-
 
 .footer-container {
-  @apply flex justify-evenly items-stretch
+  @apply flex justify-evenly items-stretch;
 }
-

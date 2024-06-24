@@ -6,4 +6,4 @@ function PlanDetailsCard() {
   )
 }
 
-export default PlanDetailsCard
+export default PlanDetailsCard;
