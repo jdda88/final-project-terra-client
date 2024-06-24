@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LogOut } from "react-feather";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/auth.context";
 
 function Navbar() {
+  const { user, logout } = useContext(AuthContext);
   return (
     <div className="w-full">
       <nav className="flex flex-row items-center justify-between px-16 text-customGreen border-b-2 ">
@@ -38,24 +41,37 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <div className="flex flex-row space-x-4 items-center">
-          <Link to="/signup">
+        {user ? (
+          <div>
             <button
+              onClick={logout}
               className="bg-customGreen text-white rounded w-24 h-9"
               type="button"
             >
-              Sign up
+              Log out
             </button>
-          </Link>
-          <Link to="/login">
-            <button
-              className="bg-customGreen text-white rounded w-24 h-9"
-              type="button"
-            >
-              Log in
-            </button>
-          </Link>
-        </div>
+          </div>
+        ) : (
+          <div className="flex flex-row space-x-4 items-center">
+            <Link to="/signup">
+              <button
+                className="bg-customGreen text-white rounded w-24 h-9"
+                type="button"
+              >
+                Sign up
+              </button>
+            </Link>
+            <Link to="/login">
+              <button
+                className="bg-customGreen text-white rounded w-24 h-9"
+                type="button"
+              >
+                Log in
+              </button>
+            </Link>
+          </div>
+        )}
+       
       </nav>
     </div>
   );

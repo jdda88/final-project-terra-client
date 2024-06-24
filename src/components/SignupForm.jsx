@@ -1,4 +1,3 @@
-// import { sign } from "jsonwebtoken";
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/auth.context.jsx";
 
@@ -17,8 +16,8 @@ function SignupForm() {
 
   return (
     <div>
-      <h1 className="mb-10 text-center text-customGreen text-2xl">
-        Signup Form
+      <h1 className="mb-10 mt-10 text-center text-customGreen text-2xl">
+        Signup
       </h1>
       <form
         onSubmit={(e) => {
