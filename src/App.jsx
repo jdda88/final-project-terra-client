@@ -1,3 +1,4 @@
+
 import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -10,10 +11,17 @@ import SignupPage from './pages/SignupPage'
 import LoginPage from './pages/LoginPage'
 import Error from './pages/Error'
 
+import React from 'react';
+import { useState } from 'react'
+import './App.css'
+import Footer from "./components/Footer";
+import TerraHomeCard from './components/TerraHomeCard';
+
 function App() {
 
   return (
     <div>
+
       <Navbar />
       <Routes>
       <Route path="/" element={<Homepage/>} />
@@ -28,6 +36,12 @@ function App() {
 
     </div>
   )
+
+    <TerraHomeCard />
+    <Footer />
+</div>
+  );
+
 }
 
-export default App
+export default App;
