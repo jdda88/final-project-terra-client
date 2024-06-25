@@ -1,20 +1,20 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useContext } from "react";
-import CreatePlanForm from "../components/CreatePlanForm";
+import EditPlanForm from "../components/EditPlanForm";
 import { AuthContext } from "../context/auth.context";
 
-function CreatePlanPage() {
+function EditPlanPage() {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   useEffect(() => {
     user && user.isAdmin ? null : navigate("/");
   }, [user]);
-  // console.log("user console log for create>>", user);
+  // console.log("user console log for edit>>", user);
   return (
     <div className="center">
-      <CreatePlanForm />
+      <EditPlanForm />
     </div>
   );
 }
 
-export default CreatePlanPage;
+export default EditPlanPage;

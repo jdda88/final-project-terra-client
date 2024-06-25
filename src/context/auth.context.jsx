@@ -55,15 +55,22 @@ function AuthProvider({ children }) {
 
   const verify = async () => {
     try {
-      const response = await api.get("/user/verify");
+      const token = localStorage.getItem("authToken");
+      if(token){
+        const response = await api.get("/user/verify");
+     setLoggedIn(true); 
       setUser(response.data.user);
-      setLoggedIn(true);
-    } catch (error) {
-      setUser(null);
+    }else{
       setLoggedIn(false);
+      setUser(null);
       localStorage.clear();
+    }  
+    } catch (error) {
+      // setUser(null);
+      // setLoggedIn(false);
+      // localStorage.clear();
       console.log("user not verified -->>", error);
-      return error;
+      // return error;
     }
   };
 
