@@ -8,7 +8,7 @@ function TerraHomeCard() {
       TERRA
       </h1>
       <p className="text-lg mb-6">the world at your fingertips</p>
-      <Link to="/destinations"> 
+      <Link to="/plan"> 
       <button className="bg-black hover:bg-gray-600 text-white py-2 px-4 rounded-full" type="button">
         Enter
         </button>

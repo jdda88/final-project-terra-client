@@ -44,11 +44,14 @@ function Footer() {
           <a href="/" className="hover:underline">
             Home
           </a>
-          <a href="/destinations" className="hover:underline">
+          <a href="/plan" className="hover:underline">
             Destinations
           </a>
           <a href="/profile" className="hover:underline">
             Profile
+          </a>
+          <a href="/edit" className="hover:underline">
+            Admin Edit
           </a>
         </div>
       </div>
