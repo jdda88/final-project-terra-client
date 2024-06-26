@@ -1,26 +1,18 @@
-// import React, { useEffect } from 'react';
+// import React from "react";
 
 // function Map() {
-//   useEffect(() => {
-//     const initialize = () => {
-//       const mapOptions = {
-//         zoom: 8,
-//         center: new window.google.maps.LatLng(-34.397, 150.644),
-//         mapTypeId: window.google.maps.MapTypeId.ROADMAP
-//       };
-//       const map = new window.google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-//     };
+//     return (
+//         <html lang="en">
+//             <head>
+//                 <meta charSet="utf-8" />
+//                 <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+//                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+//                 <title>Map</title>
+//             </head>
+//             <body>
+//                 <span>Tour Afrique</span>
+//             </body>
+//         </html>
 
-//     // Load Google Maps API and initialize the map
-//     const script = document.createElement('script');
-//     script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false';
-//     script.onload = initialize;
-//     document.head.appendChild(script);
-//   }, []);
-
-//   return (
-//     <div id="map_canvas" style={{ height: '100vh' }}></div>
-//   );
+//     );
 // }
-
-// export default Map;
