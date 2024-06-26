@@ -56,7 +56,7 @@ function CreatePlanForm() {
         onChange={handleChange}
         value={planInfo.country}
       />
-      <label htmlFor="cities">Cities</label>
+      <label>Cities</label>
       <input
         className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
         type="text"
@@ -64,7 +64,7 @@ function CreatePlanForm() {
         onChange={handleChange}
         value={planInfo.cities}
       />
-      <label htmlFor="officialLanguage">Official Language</label>
+      <label >Official Language</label>
       <input
         className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
         type="string"
@@ -72,7 +72,7 @@ function CreatePlanForm() {
         onChange={handleChangeStats}
         defaultValue={statsInfo.officialLanguage}
       />
-      <label htmlFor="population">Population</label>
+      <label >Population</label>
       <input
         className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
         type="string"
@@ -80,7 +80,7 @@ function CreatePlanForm() {
         onChange={handleChangeStats}
         defaultValue={statsInfo.population}
       />
-      <label htmlFor="capitalCity">Capital City</label>
+      <label>Capital City</label>
       <input
         className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
         type="string"
@@ -88,7 +88,7 @@ function CreatePlanForm() {
         onChange={handleChangeStats}
         defaultValue={statsInfo.capitalCity}
       />
-      <label htmlFor="currency">Currency</label>
+      <label >Currency</label>
       <input
         className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
         type="string"
@@ -96,7 +96,7 @@ function CreatePlanForm() {
         onChange={handleChangeStats}
         defaultvalue={statsInfo.currency}
       />
-      <label htmlFor="powerOutlet">Power Outlet</label>
+      <label >Power Outlet</label>
       <input
         className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
         type="string"
@@ -104,7 +104,7 @@ function CreatePlanForm() {
         onChange={handleChangeStats}
         defaultValue={statsInfo.powerOutlet}
       />
-      <label htmlFor="images">Images</label>
+      <label >Images</label>
       <input
         className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
         type="string"
@@ -112,7 +112,7 @@ function CreatePlanForm() {
         onChange={handleChange}
         value={planInfo.images}
       />
-      <label htmlFor="content">Content</label>
+      <label >Content</label>
       <textarea
         className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
         type="string"

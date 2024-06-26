@@ -1,13 +1,30 @@
 import React from "react";
-import { Card } from "flowbite-react";
-import { Link } from "react-feather";
+import { Link } from "react-router-dom"; 
 
-
-function PlanCard({ title, _id}) {
+function PlanCard({ title, _id, image }) {
   return (
-    <div>
-    
-      <Card
+    <div className="flex flex-row flex-wrap">
+      <div className="flex flex-col m-3 p-3 ">
+        <Link to={`/plan/${_id}`}>
+          <div className="flex flex-col ">
+            <img
+              className="h-56 w-72"
+              src="https://res.cloudinary.com/dprkq4xne/image/upload/v1719238596/final-project-ironhack/terra-travel-solid-black_rxxhy8.png"
+              alt={title}
+            />
+            <h4 className="m-3 text-center">{title}</h4>
+          </div>
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export default PlanCard;
+
+
+{
+  /* <div
         className="max-w-sm"
         imgAlt="Meaningful alt text for an image that is not purely decorative"
         imgSrc="/images/blog/image-1.jpg"
@@ -21,10 +38,5 @@ function PlanCard({ title, _id}) {
         >
           <span className="text-black">leters here</span>
         </Link>
-      </Card>
-    </div>
-  );
+      </div> */
 }
-
-export default PlanCard;
-

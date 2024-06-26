@@ -33,6 +33,7 @@ function ReviewForm() {
   return (
     <div className="flex flex-col">
       <form className="center flex-col" onSubmit={handleSubmit}>
+        <label >Review Title</label>
         <input
           className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
           type="text"
@@ -40,6 +41,7 @@ function ReviewForm() {
           onChange={handleChange}
           value={review.title}
         />
+        <label >Review</label>
         <textarea
           className="border-solid border-2 border-sky-500 w-80 h-28 mb-5"
           type="text-area"
@@ -47,7 +49,7 @@ function ReviewForm() {
           onChange={handleChange}
           value={review.review}
         ></textarea>
-        <button className="bg-customGreen text-white rounded w-24 h-9 ">
+        <button className="bg-customGreen text-white rounded w-24 h-9 mb-5 ">
           Review it!
         </button>
       </form>
