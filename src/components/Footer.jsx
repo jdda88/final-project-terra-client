@@ -40,19 +40,36 @@ function Footer() {
           </div>
         </div>
         {/* right side  */}
-        <div className="flex space-x-4">
-          <a href="/" className="hover:underline">
-            Home
-          </a>
-          <a href="/plan" className="hover:underline">
-            Destinations
-          </a>
-          <a href="/profile" className="hover:underline">
-            Profile
-          </a>
-          <a href="/edit" className="hover:underline">
-            Admin Edit
-          </a>
+        <div className="flex flex-col space-y-2">
+          <div className="grid grid-cols-3 gap-4">
+            {/* top row */}
+          <Link to="/" className="hover:underline">
+            
+              Home
+            
+          </Link>
+          <Link to="/plan" className="hover:underline">
+            
+              Destinations
+            
+          </Link>
+          <Link to="/profile" className="hover:underline">
+            
+              Profile
+            
+          </Link>
+          {/* bottom row */}
+          <Link to="/edit" className="hover:underline">
+            
+              Admin Edit
+            
+          </Link>
+          <Link to="/create" className="hover:underline">
+              
+                Admin Create
+
+          </Link>
+        </div>
         </div>
       </div>
     </footer>
