@@ -9,17 +9,15 @@ import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 import Error from "./pages/Error";
 import React from "react";
-import TerraHomeCard from "./components/TerraHomeCard";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <TerraHomeCard />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/destinations" element={<PlanList />} />
-        <Route path="/destinations/:planId" element={<PlanDetails />} />
+        <Route path="/plan" element={<PlanList />} />
+        <Route path="/plan/:planId" element={<PlanDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />

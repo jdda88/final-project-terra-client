@@ -44,7 +44,7 @@ function Footer() {
           <a href="/" className="hover:underline">
             Home
           </a>
-          <a href="/destinations" className="hover:underline">
+          <a href="/plan" className="hover:underline">
             Destinations
           </a>
           <a href="/profile" className="hover:underline">

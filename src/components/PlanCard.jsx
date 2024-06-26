@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from "flowbite-react";
+import { Link } from 'react-feather';
 
 function PlanCard({title, _id}) {
   return (
@@ -12,7 +13,7 @@ function PlanCard({title, _id}) {
         {title} <span className="text-black"></span>
       </h5>
       <Link
-      to={`$/destinations/${_id}`}
+      to={`$/plan/${_id}`}
       className="font-normal text-gray-700 dark:text-gray-400">
         Brief Summary      
       </Link>

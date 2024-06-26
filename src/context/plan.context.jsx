@@ -7,7 +7,7 @@ function PlanProvider ({children}) {
 
     const getAllPlans= async () => {
         try {
-            const response = await api.get("/destinations/all")
+            const response = await api.get("/plan/all")
 
             setPlans(response.data);
         } catch (error) {

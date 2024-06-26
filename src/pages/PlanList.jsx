@@ -4,12 +4,12 @@ import PlanCard from '../components/PlanCard';
 
 
 function PlanList() {
-  const { plans } = useContext(PlanContext);
+  const { plan } = useContext(PlanContext);
   
   return (
     <div>
-      {plans ? (
-        plans.map((plan) => <PlanCard {...plan} />)
+      {plan ? (
+        plan.map((plan) => <PlanCard {...plan} />)
       ) : (
       <p>Loading...</p>
     )}
