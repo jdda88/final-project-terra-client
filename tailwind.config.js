@@ -8,6 +8,10 @@ module.exports = {
           DEFAULT: "#57995E",
         },
       },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        manrope: ["Manrope", "sans-serif"],
+      },
     },
     plugins: [],
   },

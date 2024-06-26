@@ -8,11 +8,11 @@ import { GitHub } from "react-feather";
 
 function Footer() {
   return (
-    <footer className="fixed h-36 bottom-0 w-full bg-white p-4 text-customGreen">
+    <footer className="absolute h-24 bottom-0 w-full bg-neutral-50 p-4 text-customGreen">
       <div className="footer-container mx-auto flex justify-between items-center">
         {/* left side */}
         <div className="flex flex-col space-y-2">
-          <div className="text-lg font-bold text-my-custom-color mb-10">
+          <div className="text-lg font-bold text-my-custom-color mb-2">
             TERRA TRAVEL FLLC
           </div>
           <div className="flex space-x-4">
@@ -41,30 +41,30 @@ function Footer() {
         </div>
         {/* right side  */}
         <div className="flex flex-col space-y-2">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4 space">
             {/* top row */}
-          <Link to="/" className="hover:underline">
+          <Link to="/" className="hover:underline hover:text-gray-500">
             
               Home
             
           </Link>
-          <Link to="/plan" className="hover:underline">
+          <Link to="/plan" className="hover:underline hover:text-gray-500">
             
               Destinations
             
           </Link>
-          <Link to="/profile" className="hover:underline">
+          <Link to="/profile" className="hover:underline hover:text-gray-500">
             
               Profile
             
           </Link>
           {/* bottom row */}
-          <Link to="/edit" className="hover:underline">
+          <Link to="/edit" className="hover:underline hover:text-gray-500">
             
               Admin Edit
             
           </Link>
-          <Link to="/create" className="hover:underline">
+          <Link to="/create" className="hover:underline hover:text-gray-500">
               
                 Admin Create
 

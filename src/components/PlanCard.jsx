@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 function PlanCard({ title, _id, image }) {
   return (
     <div className="flex flex-row flex-wrap">
-      <div className="flex flex-col m-3 p-3 ">
+      <div className="flex flex-col m-5 p-5 w-[20vw]">
         <Link to={`/plan/${_id}`}>
           <div className="flex flex-col ">
             <img
-              className="h-56 w-72"
+              className="h-[25vh] w-[20vw] bg-white"
+              // border-stone-300 border-x-4 border-y-4
               src="https://res.cloudinary.com/dprkq4xne/image/upload/v1719238596/final-project-ironhack/terra-travel-solid-black_rxxhy8.png"
               alt={title}
             />
