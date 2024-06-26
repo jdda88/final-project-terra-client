@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "flowbite-react";
 import { Link } from "react-feather";
 
+
 function PlanCard({ title, _id}) {
   return (
     <div>
@@ -26,3 +27,4 @@ function PlanCard({ title, _id}) {
 }
 
 export default PlanCard;
+

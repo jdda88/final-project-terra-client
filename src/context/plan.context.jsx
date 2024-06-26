@@ -12,6 +12,7 @@ function PlanProvider({ children }) {
     try {
       const response = await api.get("/plan/all");
 
+
       setPlans(response.data);
     } catch (error) {
       console.log(error);
@@ -81,4 +82,6 @@ function PlanProvider({ children }) {
     </PlanContext.Provider>
   );
 }
+
 export { PlanContext, PlanProvider };
+

@@ -15,6 +15,6 @@ function TerraHomeCard() {
       </Link>
       </div>
     );
-}
+};
 
 export default TerraHomeCard;
