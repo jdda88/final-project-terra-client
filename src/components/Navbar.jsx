@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { LogOut } from "react-feather";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 
@@ -23,32 +22,39 @@ function Navbar() {
           <ul className="flex flex-row space-x-16 justify-evenly">
             <Link to="/plan">
               <li>
-                <a href="">Destinations</a>
+                <p>Destinations</p>
               </li>
             </Link>
             <Link to="/favorites">
               <li>
-                <a href="">Favorites</a>
+                <p>Favorites</p>
               </li>
             </Link>
-            <Link to="/about">
+            <Link to="/create">
               <li>
-                <a href="">About</a>
+                <p>Create</p>
               </li>
             </Link>
             <li>
-              <a href="">Search</a>
+              <p>Search</p>
             </li>
           </ul>
         </div>
         {user ? (
-          <div>
+          <div className="flex flex-row space-x-4 items-center">
             <button
               onClick={logout}
-              className="bg-customGreen text-white rounded w-24 h-9"
+              className="bg-customGreen text-white rounded w-24 h-9 "
               type="button"
             >
               Log out
+            </button>
+            <button
+              // onClick={logout}
+              className="bg-customGreen text-white rounded w-24 h-9"
+              type="button"
+            >
+              Profile
             </button>
           </div>
         ) : (
@@ -71,7 +77,6 @@ function Navbar() {
             </Link>
           </div>
         )}
-       
       </nav>
     </div>
   );

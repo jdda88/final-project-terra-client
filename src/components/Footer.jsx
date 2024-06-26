@@ -50,6 +50,9 @@ function Footer() {
           <a href="/profile" className="hover:underline">
             Profile
           </a>
+          <a href="/edit" className="hover:underline">
+            Admin Edit
+          </a>
         </div>
       </div>
     </footer>
