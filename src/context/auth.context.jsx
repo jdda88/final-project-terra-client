@@ -26,7 +26,8 @@ function AuthProvider({ children }) {
         });
       }
       if (response.status === 201 || response.status === 200) {
-        setUser(response.data);
+        console.log("this is the user data on login ==>", response.data)
+        setUser(response.data.user);
         setLoggedIn(true);
         localStorage.setItem("authToken", response.data.authToken);
         navigate("/");

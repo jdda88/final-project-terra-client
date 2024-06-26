@@ -1,57 +1,39 @@
 import { useContext, useEffect, useState } from "react";
 import { PlanContext } from "../context/plan.context";
 import { AuthContext } from "../context/auth.context";
-import ReviewForm from "./ReviewForm";
-import { EditPlanForm} from "./EditPlanForm";
-
 
 function PlanDetailsCard({ plan }) {
-  const [toggleEdit, setToggleEdit] = useState(false);
-  const {deletePlan} = useContext(PlanContext);
-  const {user} = useContext(AuthContext);
-  useEffect(()=>{
-    console.log(user)
-  }, [user])
+  const { user } = useContext(AuthContext);
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
   return (
-    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-  
-        <div className="flex flex-col p-4 leading-normal">
-          <p className="mb-3 font-normal text-black">
-            country: {plan.country} <br />
-            cities: {plan.cities} <br />
-            stats: <br />
-            {/* official language: {plan.stats.officialLanguage}<br/> */}
-            
-            <br />
-            images: {plan.images} <br />
-            content: {plan.content} <br />
-          </p>
-          {user && user.isAdmin && (
-            <>
-            {" "}
+   <div className="max-w-xs rounded overflow-hidden shadow-lg m-4">
+ 
+  <img
+    className="w-full h-96 object-cover"
+    src="https://res.cloudinary.com/dprkq4xne/image/upload/v1719426230/final-project-ironhack/landscape_joebf9.jpg"
+    alt="Image"
+  />
 
-            {/* UPDATE */}
-            <button
-            className="bg-customGreen text-white rounded w-24 h-9"
-            onClick={() => setToggleEdit(!toggleEdit)}
-            > edit 
-            </button>
+  {/* Plan Details */}
+  <div className="px-6 py-4">
+    {/* Country */}
+    <div className="font-bold text-xl mb-2">Country: {plan.country}</div>
 
-            {/* DELETE */}
-            <button
-            className="bg-customGreen text-white rounded w-24 h-9"
-            onClick={() => deletePlan(plan._id)}
-            >
-              Delete
-              </button>
-              </>
+    {/* Cities */}
+    <p className="text-gray-700 text-base mb-2">Cities: {plan.cities}</p>
 
-          )}
-      </div>
-    {toggleEdit && (
-    <EditPlanForm toggleEdit={toggleEdit} setToggleEdit={setToggleEdit} />
-    )} 
+    {/* Stats - Assuming stats is an object or array */}
+    <div className="mb-2">
+      <span className="font-bold">Stats:</span>{" "}
+      {/* Display stats here based on your data structure */}
     </div>
+
+    {/* Content */}
+    <p className="text-gray-700 text-base mb-2">Content: {plan.content}</p>
+  </div>
+</div>
   );
 }
 

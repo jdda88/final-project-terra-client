@@ -61,7 +61,7 @@ function PlanProvider({ children }) {
           toast.success("Destination deleted");
           getAllPlans();
 
-          navigate(-1);
+          navigate("/plan");
         }
       }
     } catch (error) {

@@ -1,23 +1,24 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import { PlanContext } from "../context/plan.context";
-import PlanCard from '../components/PlanCard';
-import CreatePlanForm from '../components/CreatePlanForm';
-import { Link } from 'react-router-dom';
-
+import PlanCard from "../components/PlanCard";
+import CreatePlanForm from "../components/CreatePlanForm";
+import { Link } from "react-router-dom";
 
 function PlanList() {
   const { plan } = useContext(PlanContext);
-  
-  return (
 
-    <div >
-      
+  return (
+    <div className="flex flex-row flex-wrap center">
       {plan ? (
-        plan.map((plans) =>
-        <div key={plans._id}><PlanCard {...plans} /> </div>)
+        plan.map((plans) => (
+          
+          <div key={plans._id}>
+            <PlanCard {...plans} />{" "}
+          </div>
+        ))
       ) : (
-      <p >Loading...</p>
-    )}
+        <p>Loading...</p>
+      )}
     </div>
   );
 }
