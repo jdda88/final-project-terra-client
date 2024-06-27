@@ -8,7 +8,7 @@ function PlanDetailsCard({ plan }) {
     console.log(user);
   }, [user]);
   return (
-    <div className="max-w-3xl rounded overflow-hidden shadow-lg m-4">
+    <div className="max-w-3xl rounded-lg overflow-hidden shadow-lg m-4">
       <img
         className="w-full object-cover"
         src="https://res.cloudinary.com/dprkq4xne/image/upload/v1719426230/final-project-ironhack/landscape_joebf9.jpg"
@@ -39,7 +39,7 @@ function PlanDetailsCard({ plan }) {
         </div>
 
         {/* Content */}
-        <p className="text-gray-700 text-base mb-2">Content: {plan.content}</p>
+        <p className="text-gray-700 text-base mb-2">{plan.content}</p>
       </div>
     </div>
   );
