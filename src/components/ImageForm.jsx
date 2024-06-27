@@ -53,7 +53,7 @@ function ImageForm() {
         />
         <button
           type="submit"
-          className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl"
+          className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl text-xs"
         >
           Upload image(s)
         </button>
