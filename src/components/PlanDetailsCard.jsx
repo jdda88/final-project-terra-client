@@ -28,11 +28,22 @@ function PlanDetailsCard({ plan }) {
         onSlideChange={() => console.log("slide change")}
       >
         <div>
-          <SwiperSlide className="w-full object-cover">
+          {/* MAP OVER plan.images and render a SwiperSlide structure just like below for each image */}
+
+            {plan.images.map((image, index) => ( <SwiperSlide key={index} className="w-full object-cover">
             <img
               className="w-full object-cover"
-              // src={plan.images}
-              src="https://res.cloudinary.com/dprkq4xne/image/upload/v1719426230/final-project-ironhack/landscape_joebf9.jpg"
+              src={image}
+              alt={`Image ${index + 1}`}
+            />
+          </SwiperSlide>) )}
+
+
+          {/* <SwiperSlide className="w-full object-cover">
+            <img
+              className="w-full object-cover"
+              src={plan.images}
+              // src="https://res.cloudinary.com/dprkq4xne/image/upload/v1719426230/final-project-ironhack/landscape_joebf9.jpg"
               alt="Image"
             />
           </SwiperSlide>
@@ -59,7 +70,7 @@ function PlanDetailsCard({ plan }) {
               src="https://res.cloudinary.com/dprkq4xne/image/upload/v1719506777/final-project-ironhack/testimg2_p1iowm.avif"
               alt="Image"
             />
-          </SwiperSlide>
+          </SwiperSlide> */}
         </div>
       </Swiper>
 

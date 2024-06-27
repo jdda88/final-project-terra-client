@@ -1,7 +1,10 @@
 import { useContext, useState } from "react";
 import { PlanContext } from "../context/plan.context";
-
+import ImageForm from "./ImageForm";
+import api from "../service/api";
 function CreatePlanForm() {
+  const [files, setFiles] = useState([]);
+
   const [planInfo, setPlanInfo] = useState({
     title: "",
     country: "",
@@ -18,7 +21,25 @@ function CreatePlanForm() {
     currency: "",
     powerOutlet: "",
   });
-    
+  const handleUpload = async (e) => {
+    e.preventDefault();
+    const result = [];
+
+    for (const file of files) {
+      const formData = new FormData();
+      formData.append("picture", file);
+      try {
+        const response = await api.post("/image/upload", formData);
+        result.push(response.data.image);
+      } catch (error) {
+        console.error("Error uploading image:", error);
+      }
+    }
+
+   await createPlan({...planInfo, stats: statsInfo, images: result})
+    console.log("Images uploaded:", result);
+  };
+
 
   const { createPlan } = useContext(PlanContext);
 
@@ -35,9 +56,9 @@ function CreatePlanForm() {
   return (
     <form
       onSubmit={(e) => {
-        e.preventDefault();
-        console.log({...planInfo, stats: statsInfo});
-        createPlan({...planInfo, stats: statsInfo});
+        
+       
+        handleUpload(e);
       }}
       className="center flex-col p-8 m-10 rounded-sm w-[40vw]"
     >
@@ -106,13 +127,7 @@ function CreatePlanForm() {
         defaultValue={statsInfo.powerOutlet}
       />
       <label >Images</label>
-      <input
-        className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
-        type="string"
-        name="images"
-        onChange={handleChange}
-        value={planInfo.images}
-      />
+      <ImageForm setFiles={setFiles}/>
       <label >Content</label>
       <textarea
         className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"

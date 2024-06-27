@@ -25,7 +25,7 @@ function MapComponent() {
 
   return (
     <div>
-      <div className="app">
+      <div className="app mb-5 p-10">
         {mapLoaded ? (
       <LoadScript googleMapsApiKey="AIzaSyBP88BUsPdlJa6jR8cwUiUi_lr0ZGqjiPM">
         <GoogleMap
@@ -45,7 +45,6 @@ function MapComponent() {
         ) : (
           <div className="loading-indicator">Loading Map...</div> 
         )}
-        console.log("loading map")
         
     </div> 
     </div>

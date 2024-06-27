@@ -14,7 +14,7 @@ function Homepage() {
   return (
     <div className="relative flex flex-col items-center justify-center h-auto w-auto">
       <TerraHomeCard />
-      <div className="flex flex-col ml-10 items-center justify-center mb-56 w-1/3">
+      <div className="flex flex-col ml-10 items-center justify-center w-1/3 mb-5">
         <h1 className="text-3xl text-customGreen font-montserrat font-extrabold mb-4 mt-20 ">
           Who We Are
         </h1>
@@ -31,7 +31,7 @@ function Homepage() {
           shared wisdom for fellow travelers.
         </p>
         <Link to="/plan">
-          <button className="bg-customGreen text-white rounded w-40 h-16 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl mt-9">
+          <button className="bg-customGreen text-white rounded w-40 h-16 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl mt-5">
             Find your next adventure
           </button>
         </Link>

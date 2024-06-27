@@ -1,6 +1,7 @@
 import { PlanContext } from "../context/plan.context";
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ImageForm from "./ImageForm";
 
 function EditPlanForm({ toggleEdit, setToggleEdit }) {
   const [currPlan, setCurrPlan] = useState(null);
@@ -111,14 +112,7 @@ function EditPlanForm({ toggleEdit, setToggleEdit }) {
           onChange={handleChangeStats}
           defaultValue={statsInfo.powerOutlet}
         />
-        <label htmlFor="images">Images</label>
-        <input
-          className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
-          type="string"
-          name="images"
-          onChange={handleChange}
-          defaultValue={planInfo.images}
-        />
+        <ImageForm />
         <label htmlFor="content">Content</label>
         <textarea
           className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
@@ -130,7 +124,7 @@ function EditPlanForm({ toggleEdit, setToggleEdit }) {
 
         <button
           type="submit"
-          className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl"
+          className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl mb-3"
         >
           Submit Edit
         </button>
