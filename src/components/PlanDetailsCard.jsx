@@ -66,12 +66,12 @@ function PlanDetailsCard({ plan }) {
       {/* Plan Details */}
       <div className="px-6 py-4">
         {/* Country */}
-        <div className=" text-xl mb-2">Country: {plan.country}</div>
+        <div className=" text-xl font-semibold mb-2 font-manrope">{plan.country}</div>
 
         {/* Cities */}
-        <p className="text-gray-700 text-base mb-2">Cities: {plan.cities}</p>
+        <p className="text-gray-700 text-base mb-2 font-manrope font-medium">Cities: {plan.cities}</p>
 
-        <div className="mb-2">
+        <div className="mb-2 font-manrope font-light">
           <details>
             <summary>Additional Info:</summary>
             <ul>
@@ -85,7 +85,7 @@ function PlanDetailsCard({ plan }) {
         </div>
 
         {/* Content */}
-        <p className="text-gray-700 text-base mb-2">{plan.content}</p>
+        <p className="text-gray-700 text-base mb-2 font-montserrat">{plan.content}</p>
       </div>
     </div>
   );

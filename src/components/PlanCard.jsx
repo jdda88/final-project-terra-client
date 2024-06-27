@@ -12,7 +12,7 @@ function PlanCard({ title, _id, image }) {
             alt={title}
           />
           <div className="p-4">
-            <h4 className="text-xl font-semibold mb-2">{title}</h4>
+            <h4 className="text-xl font-semibold font-manrope mb-2">{title}</h4>
             {/* Additional content or details can go here */}
           </div>
         </div>

@@ -17,13 +17,13 @@ function Navbar() {
               href="/"
             />
           </Link>
-          <span className="font-bold text-2xl">Terra Travel</span>
+          <span className="font-extrabold text-2xl font-manrope">Terra Travel</span>
         </div>
         <div className="flex flex-row ml-4">
           <ul className="text-center flex flex-row space-x-16 justify-evenly ">
             <Link to="/plan">
               <li>
-                <p className="mt-2">Destinations</p>
+                <p className="mt-2 font-medium font-montserrat">Destinations</p>
               </li>
             </Link>
             <div>
