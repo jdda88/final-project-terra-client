@@ -4,15 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        customGreen: {
-          DEFAULT: "#57995E",
-        },
+        customGreen: "#57995E",
+        customGreenHover: "#3D765B",
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
         manrope: ["Manrope", "sans-serif"],
       },
     },
-    plugins: [],
   },
+  plugins: [],
 };

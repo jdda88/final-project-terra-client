@@ -100,7 +100,7 @@ function CreatePlanForm() {
       <input
         className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
         type="string"
-        name=""
+        name="powerOutlet"
         onChange={handleChangeStats}
         defaultValue={statsInfo.powerOutlet}
       />

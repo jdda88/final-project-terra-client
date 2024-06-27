@@ -58,17 +58,7 @@ function Footer() {
               Profile
             
           </Link>
-          {/* bottom row */}
-          <Link to="/edit" className="hover:underline hover:text-gray-500">
-            
-              Admin Edit
-            
-          </Link>
-          <Link to="/create" className="hover:underline hover:text-gray-500">
-              
-                Admin Create
 
-          </Link>
         </div>
         </div>
       </div>

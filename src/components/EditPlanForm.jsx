@@ -32,7 +32,7 @@ function EditPlanForm({ toggleEdit, setToggleEdit }) {
 
   const handleChangeStats = (e) => {
     const { name, value } = e.target;
-    setCurrPlan((prev) => ({ ...prev, [name]: value }));
+    setStatsInfo((prev) => ({ ...prev, [name]: value }));
   };
 
   useEffect(() => {
@@ -43,7 +43,7 @@ function EditPlanForm({ toggleEdit, setToggleEdit }) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          updatePlan(currPlan, planId, setToggleEdit);
+          updatePlan({...currPlan, stats:statsInfo}, planId, setToggleEdit);
         }}
         className="center flex-col border-2 rounded-sm w-[40vw] h-full"
       >
@@ -69,7 +69,7 @@ function EditPlanForm({ toggleEdit, setToggleEdit }) {
           type="text"
           name="cities"
           onChange={handleChange}
-          defaultvalue={planInfo.cities}
+          defaultValue={planInfo.cities}
         />
         <label htmlFor="officialLanguage">Official Language</label>
         <input
@@ -107,7 +107,7 @@ function EditPlanForm({ toggleEdit, setToggleEdit }) {
         <input
           className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
           type="string"
-          name=""
+          name="powerOutlet"
           onChange={handleChangeStats}
           defaultValue={statsInfo.powerOutlet}
         />
@@ -128,7 +128,7 @@ function EditPlanForm({ toggleEdit, setToggleEdit }) {
           defaultValue={planInfo.content}
         ></textarea>
 
-        <button type="submit" className="bg-customGreen text-white rounded w-24 h-9">
+        <button type="submit" className="bg-customGreen text-white rounded w-24 h-9 m-4 hover:bg-customGreenHover">
           Submit Edit
         </button>
       </form>
