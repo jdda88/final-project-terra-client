@@ -19,7 +19,7 @@ function Navbar() {
           <span className="font-bold text-2xl">Terra Travel</span>
         </div>
         <div className="flex flex-row ml-4">
-          <ul className="flex flex-row space-x-16 justify-evenly">
+          <ul className="flex flex-row space-x-16 justify-evenly ">
             <Link to="/plan">
               <li>
                 <p>Destinations</p>
@@ -28,11 +28,6 @@ function Navbar() {
             <Link to="/favorites">
               <li>
                 <p>Favorites</p>
-              </li>
-            </Link>
-            <Link to="/create">
-              <li>
-                <p>Create</p>
               </li>
             </Link>
             <li>
@@ -44,24 +39,25 @@ function Navbar() {
           <div className="flex flex-row space-x-4 items-center">
             <button
               onClick={logout}
-              className="bg-customGreen text-white rounded w-24 h-9 "
+              className="bg-customGreen text-white rounded w-24 h-9  hover:bg-customGreenHover"
               type="button"
             >
               Log out
             </button>
+            <Link to="/create">
             <button
               // onClick={logout}
-              className="bg-customGreen text-white rounded w-24 h-9"
+              className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover"
               type="button"
             >
-              Profile
-            </button>
+              Create post
+            </button></Link>
           </div>
         ) : (
           <div className="flex flex-row space-x-4 items-center">
             <Link to="/signup">
               <button
-                className="bg-customGreen text-white rounded w-24 h-9"
+                className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover"
                 type="button"
               >
                 Sign up
@@ -69,7 +65,7 @@ function Navbar() {
             </Link>
             <Link to="/login">
               <button
-                className="bg-customGreen text-white rounded w-24 h-9"
+                className="bg-customGreen text-white rounded w-24 h-9  hover:bg-customGreenHover"
                 type="button"
               >
                 Log in

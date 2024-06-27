@@ -5,10 +5,12 @@ import toast from "react-hot-toast";
 import api from "../service/api";
 
 
+
 function ReviewForm() {
   const [review, setReview] = useState({ title: "", review: "" });
   const { planId } = useParams();
   const { getAllPlans } = useContext(PlanContext);
+  
   const handleChange = (e) => {
     setReview((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -33,24 +35,26 @@ function ReviewForm() {
   return (
     <div className="flex flex-col">
       <form className="center flex-col" onSubmit={handleSubmit}>
-        <label >Review Title</label>
+      
+        <label >Title</label>
         <input
-          className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
+          className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
           type="text"
           name="title"
           onChange={handleChange}
           value={review.title}
         />
-        <label >Review</label>
+
+        <label >Comment</label>
         <textarea
-          className="border-solid border-2 border-sky-500 w-80 h-28 mb-5"
+          className="border-solid border-2 rounded border-customGreen w-96 h-44 mb-5"
           type="text-area"
           name="review"
           onChange={handleChange}
           value={review.review}
         ></textarea>
-        <button className="bg-customGreen text-white rounded w-24 h-9 mb-5 ">
-          Review it!
+        <button className="bg-customGreen text-white rounded w-24 h-9 mb-5 hover:bg-customGreenHover">
+          Comment
         </button>
       </form>
     </div>

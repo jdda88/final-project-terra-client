@@ -25,18 +25,18 @@ function ReviewCard({ review, user }) {
 
   return (
     <div>
-      <article className="p-6 text-base bg-white rounded-lg dark:bg-stone-700 w-[50vw]">
+      <article className="p-6  bg-gray-200 rounded-lg w-[50vw] shadow-xl">
         <footer className="flex justify-between items-center mb-2">
           <div className="flex items-center">
-            <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold">
+            <p className="inline-flex items-center mr-3  font-bold">
               <img
                 className="mr-2 w-6 h-6 rounded-full"
-                src="https://assets-global.website-files.com/642d682a6e4ca0d303c81fdf/65155692e2dc9f25a8fa90a5_ezgif.com-resize.webp"
+                src="https://res.cloudinary.com/dprkq4xne/image/upload/v1719430253/final-project-ironhack/generic-avatar_dtrj43.png"
                 alt="test user"
               />
               {review.creator.username}
             </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-sm">
               {new Date(review.createdAt).toLocaleString("en-US", {
                 weekday: "short",
                 year: "numeric",
@@ -49,9 +49,10 @@ function ReviewCard({ review, user }) {
             </p>
           </div>
         </footer>
-        <p className="text-gray-500 dark:text-gray-300">{review.review}</p>
+        <p className="font-semibold">{review.title}: </p>
+        <p className="m-2">{review.review}</p>
         {user && user._id === review.creator._id && (
-          <button className="bg-customGreen text-white rounded w-24 h-9" onClick={() => handleDelete(review._id)}>
+          <button className="bg-customGreen text-white rounded w-32 h-9 m-2 hover:bg-customGreenHover" onClick={() => handleDelete(review._id)}>
             Delete comment
           </button>
         )}

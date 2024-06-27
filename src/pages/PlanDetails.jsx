@@ -1,12 +1,10 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import { PlanContext } from "../context/plan.context";
 import { AuthContext } from "../context/auth.context";
 import { useParams } from "react-router-dom";
-import { Link } from "react-feather";
 import PlanDetailsCard from "../components/PlanDetailsCard";
 import ReviewCard from "../components/ReviewCard";
 import ReviewForm from "../components/ReviewForm";
-import { Navbar } from "flowbite-react";
 import EditPlanForm from "../components/EditPlanForm";
 
 function PlanDetails() {
@@ -16,6 +14,10 @@ function PlanDetails() {
   const { plan, getAllPlans } = useContext(PlanContext);
   const { planId } = useParams();
   const { user } = useContext(AuthContext);
+  const targetRef = useRef();
+  const scrollToSection = () => {
+    targetRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   useEffect(() => {
     plan && setPlans(plan.find((curr) => curr._id === planId));
@@ -32,6 +34,24 @@ function PlanDetails() {
       ) : (
         <p>"Loading"</p>
       )}
+      {!user ? (
+        <p></p>
+      ) : (
+        <button
+          className="bg-customGreen text-white rounded w-40 h-9 hover:bg-customGreenHover"
+          type="button"
+          onClick={scrollToSection}
+        >
+          Leave a comment!
+        </button>
+      )}
+      {selectedPlan && selectedPlan.reviews ? (
+        selectedPlan.reviews.map((review) => (
+          <ReviewCard key={review._id} review={review} user={user} />
+        ))
+      ) : (
+        <p>No reviews yet</p>
+      )}
       {toggleEdit && (
         <EditPlanForm toggleEdit={toggleEdit} setToggleEdit={setToggleEdit} />
       )}
@@ -40,30 +60,32 @@ function PlanDetails() {
           {" "}
           {/* UPDATE */}
           <div className="flex flex-row space-x-4">
-          <button
-            className="bg-customGreen text-white rounded w-24 h-9"
-            onClick={() => setToggleEdit(!toggleEdit)}
-          >
-            {" "}
-            Edit
-          </button>
-          {/* DELETE */}
-          <button
-            className="bg-customGreen text-white rounded w-24 h-9"
-            onClick={() => deletePlan(selectedPlan._id)}
-          >
-            Delete
-          </button></div>
+            <button
+              className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover"
+              onClick={() => setToggleEdit(!toggleEdit)}
+            >
+              {" "}
+              Edit
+            </button>
+            {/* DELETE */}
+            <button
+              className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover"
+              onClick={() => deletePlan(selectedPlan._id)}
+            >
+              Delete
+            </button>
+          </div>
         </>
       )}
-      {!user ? <p></p> : <ReviewForm />}
 
-      {selectedPlan && selectedPlan.reviews ? (
-        selectedPlan.reviews.map((review) => (
-          <ReviewCard key={review._id} review={review} user={user} />
-        ))
+      
+      {!user ? (
+        <p></p>
       ) : (
-        <p>No reviews yet</p>
+        <div ref={targetRef}>
+          {" "}
+          <ReviewForm />{" "}
+        </div>
       )}
     </div>
   );
