@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function PlanCard({ title, _id, image }) {
   return (
+
     <div className="flex flex-col">
       <Link to={`/plan/${_id}`}>
         <div className="bg-white rounded-lg overflow-hidden shadow-lg h-80">

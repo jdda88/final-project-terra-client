@@ -4,17 +4,17 @@ import TerraHomeCard from "../components/TerraHomeCard";
 
 function Homepage() {
   return (
-    <div>
+    <div className="relative flex flex-col items-center justify-center h-auto w-auto">
     <TerraHomeCard />
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-3xl font-bold mb-4">Who We Are</h1>
-      <p className="text-center">
-        About Us <br />
-         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, odio?
+      <div className="ml-10 mb-56">
+      <h1 className="text-3xl text-customGreen font-montserrat font-extrabold mb-4 mt-20 ">Who We Are</h1>
+      <p className="text-center font-montserrat">
+         A little bit about us, the writers and the travelers. 
       </p>
+      </div>
       <Footer />
     </div>
-    </div>
+    
   );
 }
 
