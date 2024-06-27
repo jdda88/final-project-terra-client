@@ -5,10 +5,9 @@ import api from "../service/api";
 
 function ReviewCard({ review, user }) {
   const { getAllPlans } = useContext(PlanContext);
-  
+
   const handleDelete = async (reviewId) => {
     try {
-      
       const check = confirm("Do you want to delete this review? ");
       if (check) {
         const response = await api.delete("/review/" + reviewId);
@@ -52,7 +51,10 @@ function ReviewCard({ review, user }) {
         <p className="font-semibold">{review.title}: </p>
         <p className="m-2">{review.review}</p>
         {user && user._id === review.creator._id && (
-          <button className="bg-customGreen text-white rounded w-32 h-9 m-2 hover:bg-customGreenHover" onClick={() => handleDelete(review._id)}>
+          <button
+            className="bg-customGreen text-white rounded w-36 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl"
+            onClick={() => handleDelete(review._id)}
+          >
             Delete comment
           </button>
         )}
