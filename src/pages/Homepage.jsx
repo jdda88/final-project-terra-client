@@ -1,8 +1,12 @@
-import React from "react";
+import { useState, useEffect, React } from "react";
 import Footer from "../components/Footer";
 import TerraHomeCard from "../components/TerraHomeCard";
+import Map from "../components/Map";
+import MapComponent from "../components/Map";
+
 
 function Homepage() {
+
   return (
     <div className="relative flex flex-col items-center justify-center h-auto w-auto">
     <TerraHomeCard />
@@ -12,6 +16,7 @@ function Homepage() {
          A little bit about us, the writers and the travelers. 
       </p>
       </div>
+      <MapComponent/>
       <Footer />
     </div>
     
