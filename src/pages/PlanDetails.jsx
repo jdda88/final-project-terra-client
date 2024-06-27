@@ -38,7 +38,7 @@ function PlanDetails() {
         <p></p>
       ) : (
         <button
-          className="bg-customGreen text-white rounded w-40 h-9 hover:bg-customGreenHover"
+          className="bg-customGreen text-white rounded w-40 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl"
           type="button"
           onClick={scrollToSection}
         >
@@ -61,7 +61,7 @@ function PlanDetails() {
           {/* UPDATE */}
           <div className="flex flex-row space-x-4">
             <button
-              className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover"
+              className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl"
               onClick={() => setToggleEdit(!toggleEdit)}
             >
               {" "}
@@ -69,7 +69,7 @@ function PlanDetails() {
             </button>
             {/* DELETE */}
             <button
-              className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover"
+              className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl"
               onClick={() => deletePlan(selectedPlan._id)}
             >
               Delete
@@ -78,7 +78,6 @@ function PlanDetails() {
         </>
       )}
 
-      
       {!user ? (
         <p></p>
       ) : (

@@ -19,6 +19,7 @@ function CreatePlanForm() {
     powerOutlet: "",
   });
     
+
   const { createPlan } = useContext(PlanContext);
 
   const handleChange = (e) => {
@@ -42,7 +43,7 @@ function CreatePlanForm() {
     >
       <label htmlFor="title">Title</label>
       <input
-        className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
+        className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
         type="text"
         name="title"
         onChange={handleChange}
@@ -50,7 +51,7 @@ function CreatePlanForm() {
       />
       <label htmlFor="country">Country</label>
       <input
-        className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
+        className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
         type="string"
         name="country"
         onChange={handleChange}
@@ -58,7 +59,7 @@ function CreatePlanForm() {
       />
       <label>Cities</label>
       <input
-        className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
+        className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
         type="text"
         name="cities"
         onChange={handleChange}
@@ -66,7 +67,7 @@ function CreatePlanForm() {
       />
       <label >Official Language</label>
       <input
-        className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
+        className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
         type="string"
         name="officialLanguage"
         onChange={handleChangeStats}
@@ -74,7 +75,7 @@ function CreatePlanForm() {
       />
       <label >Population</label>
       <input
-        className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
+        className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
         type="string"
         name="population"
         onChange={handleChangeStats}
@@ -82,7 +83,7 @@ function CreatePlanForm() {
       />
       <label>Capital City</label>
       <input
-        className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
+        className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
         type="string"
         name="capitalCity"
         onChange={handleChangeStats}
@@ -90,7 +91,7 @@ function CreatePlanForm() {
       />
       <label >Currency</label>
       <input
-        className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
+        className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
         type="string"
         name="currency"
         onChange={handleChangeStats}
@@ -98,7 +99,7 @@ function CreatePlanForm() {
       />
       <label >Power Outlet</label>
       <input
-        className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
+        className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
         type="string"
         name="powerOutlet"
         onChange={handleChangeStats}
@@ -106,7 +107,7 @@ function CreatePlanForm() {
       />
       <label >Images</label>
       <input
-        className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
+        className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
         type="string"
         name="images"
         onChange={handleChange}
@@ -114,7 +115,7 @@ function CreatePlanForm() {
       />
       <label >Content</label>
       <textarea
-        className="border-solid border-2 border-sky-500 w-80 mt-5 mb-5"
+        className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
         type="string"
         name="content"
         onChange={handleChange}
@@ -123,11 +124,12 @@ function CreatePlanForm() {
 
       <button
         type="submit"
-        className="bg-customGreen text-white rounded w-24 h-9"
+        className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl"
       >
         Create
       </button>
     </form>
+
   );
 }
 

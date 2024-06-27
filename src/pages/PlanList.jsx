@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { PlanContext } from "../context/plan.context";
 import PlanCard from "../components/PlanCard";
 import Masonry from "react-masonry-css";
+import ImageForm from "../components/ImageForm"
 
 function PlanList() {
   const { plan } = useContext(PlanContext);
@@ -25,6 +26,7 @@ function PlanList() {
             {plan.map((plans) => (
               <div key={plans._id} className="mb-4">
                 <PlanCard {...plans} />
+                <ImageForm />
               </div>
             ))}
           </Masonry>

@@ -130,7 +130,7 @@ function EditPlanForm({ toggleEdit, setToggleEdit }) {
 
         <button
           type="submit"
-          className="bg-customGreen text-white rounded w-24 h-9 m-4 hover:bg-customGreenHover"
+          className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl"
         >
           Submit Edit
         </button>

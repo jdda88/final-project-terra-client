@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
+import SearchBar from "./Searcbar";
 
 function Navbar() {
   const { user, logout } = useContext(AuthContext);
@@ -19,45 +20,40 @@ function Navbar() {
           <span className="font-bold text-2xl">Terra Travel</span>
         </div>
         <div className="flex flex-row ml-4">
-          <ul className="flex flex-row space-x-16 justify-evenly ">
+          <ul className="text-center flex flex-row space-x-16 justify-evenly ">
             <Link to="/plan">
               <li>
-                <p>Destinations</p>
+                <p className="mt-2">Destinations</p>
               </li>
             </Link>
-            <Link to="/favorites">
-              <li>
-                <p>Favorites</p>
-              </li>
-            </Link>
-            <li>
-              <p>Search</p>
-            </li>
+            <div>
+            <SearchBar /></div>
           </ul>
         </div>
         {user ? (
           <div className="flex flex-row space-x-4 items-center">
             <button
               onClick={logout}
-              className="bg-customGreen text-white rounded w-24 h-9  hover:bg-customGreenHover"
+              className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl"
               type="button"
             >
               Log out
             </button>
             <Link to="/create">
-            <button
-              // onClick={logout}
-              className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover"
-              type="button"
-            >
-              Create post
-            </button></Link>
+              <button
+                // onClick={logout}
+                className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl"
+                type="button"
+              >
+                Create post
+              </button>
+            </Link>
           </div>
         ) : (
           <div className="flex flex-row space-x-4 items-center">
             <Link to="/signup">
               <button
-                className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover"
+                className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl"
                 type="button"
               >
                 Sign up
@@ -65,7 +61,7 @@ function Navbar() {
             </Link>
             <Link to="/login">
               <button
-                className="bg-customGreen text-white rounded w-24 h-9  hover:bg-customGreenHover"
+                className="bg-customGreen text-white rounded w-24 h-9 hover:bg-customGreenHover transition transform hover:scale-105 hover:shadow-xl"
                 type="button"
               >
                 Log in
