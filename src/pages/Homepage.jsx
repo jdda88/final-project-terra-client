@@ -1,9 +1,16 @@
-import React from "react";
+import { useState, useEffect, React } from "react";
 import Footer from "../components/Footer";
 import TerraHomeCard from "../components/TerraHomeCard";
+
 import { Link } from "react-router-dom";
 
+import Map from "../components/Map";
+import MapComponent from "../components/Map";
+
+
+
 function Homepage() {
+
   return (
     <div className="relative flex flex-col items-center justify-center h-auto w-auto">
       <TerraHomeCard />
@@ -29,6 +36,7 @@ function Homepage() {
           </button>
         </Link>
       </div>
+      <MapComponent/>
       <Footer />
     </div>
   );

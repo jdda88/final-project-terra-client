@@ -41,14 +41,14 @@ function Footer() {
         </div>
         {/* right side  */}
         <div className="flex flex-col space-y-2">
-          <div className="grid grid-cols-3 gap-4 space">
+          <div className="grid grid-cols-3 gap-4">
             {/* top row */}
           <Link to="/" className="hover:underline hover:text-gray-500">
             
               Home
             
           </Link>
-          <Link to="/plan" className="hover:underline hover:text-gray-500">
+          <Link to="/plan" className="hover:underline hover:text-gray-500 -ml-5 mr-9">
             
               Destinations
             

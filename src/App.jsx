@@ -7,15 +7,13 @@ import PlanDetails from "./pages/PlanDetails";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 import Error from "./pages/Error";
-import React from "react";
+import React, { useState } from "react";
 import CreatePlanPage from "./pages/CreatePlanPage";
 import EditPlanForm from "./components/EditPlanForm";
-// import ProfilePage from "./pages/ProfilePage";
-// import {APIProvider} from '@vis.gl/react-google-map';
 
 function App() {
-  // <APIProvider apiKey={'AIzaSyBP88BUsPdlJa6jR8cwUiUi_lr0ZGqjiPM'} onLoad={() => console.log('Maps API has been loaded')}>
-  // </APIProvider>
+  
+  const [center, setCenter] = useState({ lat: 40.7128, lng: -74.0060 });
   return (
     <div>
       <Navbar />
