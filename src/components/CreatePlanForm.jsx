@@ -130,7 +130,7 @@ function CreatePlanForm() {
       <ImageForm setFiles={setFiles}/>
       <label >Content</label>
       <textarea
-        className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
+        className="border-solid border-2 rounded border-customGreen w-80 h-32 mt-2 mb-5"
         type="string"
         name="content"
         onChange={handleChange}

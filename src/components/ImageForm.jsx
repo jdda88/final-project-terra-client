@@ -20,7 +20,7 @@ function ImageForm({setFiles}) {
   return (
     <div>
       
-        <label htmlFor="imageUpload"> Upload images </label>
+        <label htmlFor="imageUpload"></label>
         <input
           className="border-solid border-2 rounded border-customGreen w-80 mt-2 mb-5"
           type="file"
