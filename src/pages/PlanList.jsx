@@ -26,7 +26,6 @@ function PlanList() {
             {plan.map((plans) => (
               <div key={plans._id} className="mb-4">
                 <PlanCard {...plans} />
-                <ImageForm />
               </div>
             ))}
           </Masonry>
