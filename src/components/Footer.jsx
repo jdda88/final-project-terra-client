@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
 import { MessageCircle } from "react-feather";
 import { Linkedin } from "react-feather";
 import { GitHub } from "react-feather";
-//text colors aren't working
+
 
 function Footer() {
   return (

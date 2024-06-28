@@ -3,8 +3,6 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import { useNavigate } from "react-router-dom";
 import PlanList from "../pages/PlanList";
 import PlanDetailsCard from "./PlanDetailsCard";
-// import { getDestinations } from './api';
-// import { Marker } from "react-simple-maps";
 
 function MapComponent() {
   const [center, setCenter] = useState({ lat: 40.7128, lng: -74.0060 });

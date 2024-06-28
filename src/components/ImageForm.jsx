@@ -1,15 +1,3 @@
-// backend: cloudinary middleware -- done
-// backend: route for image upload -- done
-// front end: form for uploading image -- done
-// front end: submit handler --> -- done
-// front end: ---> create results variable -- done
-// front end: ---> loop the files into the results variable --done
-// front end: ---> step through each file to upload them to cloudinary --done
-// front end: ---> get cloudinary string --done
-// front end: ---> compile strings into single variable --done
-// front end: ---> integrate this data to the create form request create object --
-
-
 function ImageForm({setFiles}) {
 
   const handleChange = (e) => {

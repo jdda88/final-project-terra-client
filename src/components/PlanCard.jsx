@@ -13,7 +13,6 @@ function PlanCard({ title, _id, images }) {
           />
           <div className="p-4">
             <h4 className="text-xl font-semibold mb-2">{title}</h4>
-            {/* Additional content or details can go here */}
           </div>
         </div>
       </Link>

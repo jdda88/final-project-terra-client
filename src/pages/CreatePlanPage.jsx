@@ -9,7 +9,6 @@ function CreatePlanPage() {
   useEffect(() => {
     user && user.isAdmin ? null : navigate("/");
   }, [user]);
-  // console.log("user console log for create>>", user);
   return (
     <div className="center">
       <CreatePlanForm />

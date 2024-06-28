@@ -22,7 +22,7 @@ function SearchBar() {
 
   const fetchPlanSearchData = async () => {
     try {
-      const response = await api.get("/plan/all"); // Assuming you have an endpoint to fetch plans
+      const response = await api.get("/plan/all"); 
       setPlanSearchData(
         response.data.map((plan) => ({ value: plan._id, label: plan.title }))
       );

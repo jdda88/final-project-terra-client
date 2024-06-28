@@ -37,49 +37,14 @@ function PlanDetailsCard({ plan }) {
               alt={`Image ${index + 1}`}
             />
           </SwiperSlide>) )}
-
-
-          {/* <SwiperSlide className="w-full object-cover">
-            <img
-              className="w-full object-cover"
-              src={plan.images}
-              // src="https://res.cloudinary.com/dprkq4xne/image/upload/v1719426230/final-project-ironhack/landscape_joebf9.jpg"
-              alt="Image"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              className="w-full object-cover"
-              // src={plan.images}
-              src="https://res.cloudinary.com/dprkq4xne/image/upload/v1719498817/final-project-ironhack/tokyo_m1qdxm.webp"
-              alt="Image"
-            />{" "}
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              className="w-full object-cover"
-              // src={plan.images}
-              src="https://res.cloudinary.com/dprkq4xne/image/upload/v1719506784/final-project-ironhack/testimg3_xpl8oi.webp"
-              alt="Image"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              className="w-full object-cover"
-              // src={plan.images}
-              src="https://res.cloudinary.com/dprkq4xne/image/upload/v1719506777/final-project-ironhack/testimg2_p1iowm.avif"
-              alt="Image"
-            />
-          </SwiperSlide> */}
         </div>
       </Swiper>
 
-      {/* Plan Details */}
       <div className="px-6 py-4">
-        {/* Country */}
+
         <div className=" text-xl mb-2">Country: {plan.country}</div>
 
-        {/* Cities */}
+
         <p className="text-gray-700 text-base mb-2">Cities: {plan.cities}</p>
 
         <div className="mb-2">
@@ -95,7 +60,7 @@ function PlanDetailsCard({ plan }) {
           </details>
         </div>
 
-        {/* Content */}
+
         <p className="text-gray-700 text-base mb-2">{plan.content}</p>
       </div>
     </div>
